@@ -1,18 +1,37 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+import Script from 'next/experimental-script';
 
 const ProjeTakipSistemiPage: React.FC = () => {
   return (
     <>
       <Head>
-        <title>İşletmeniz İçin Proje Çağrılarını Takip Edebileceğiniz Sistem</title>
-        <meta name="description" content="Sektörünüz için en uygun ihale ve hibe çağrılarını kaçırmayın. Her gün taranan ihale ve hibe çağrıları ile fırsatları kaçırmadan, başvuru sürecini hızlandırın." />
+        <title>İşletmeniz İçin Proje Çağrılarını Takip Edebileceğiniz Sistem - UYG Yönetim ve Danışmanlık</title>
+        <meta charSet="utf-8"/>
+        <meta property="keywords" content="proje takip,hibe çağrıları,destek programları,danışmanlık" key="title" />
+        <meta property="og:title" content="İşletmeniz İçin Proje Çağrılarını Takip Edebileceğiniz Sistem" key="title" />
+        <meta name="Description" content="İşletmenizin gelişimi için kritik öneme sahip proje çağrılarını takip edebileceğiniz gelişmiş sistem." />
+        <meta name="og:description" content="İşletmenizin gelişimi için kritik öneme sahip proje çağrılarını takip edebileceğiniz gelişmiş sistem." />
+        <meta property="og:url" content="/projeTakipSistemi" />
+        <meta property="og:image" content="proje-takip.jpeg" />
+        <link rel="manifest" href="/site.webmanifest" />
       </Head>
+      <Script
+        src="https://www.google-analytics.com/analytics.js"      />
+      <Script id="google-analytics">
+      {`
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'G-H7KR0LT2B4', 'auto');
+      ga('send', 'pageview');
+      `}
+      </Script>
       
-      <div className="teknopark-page">
-        <div className="page-container">
-          <h1 className="page-title">Sektörünüz için En Uygun İhale ve Hibe Çağrılarını Kaçırmayın</h1>
+      <div className='hakkimizda-aciklama'>
+        <h1>İşletmeniz İçin Proje Çağrılarını Takip Edebileceğiniz Sistem</h1>
           
           <div className="content-section">
             <p style={{ fontSize: '1.2em', textAlign: 'center', marginBottom: '30px' }}>
@@ -122,9 +141,8 @@ const ProjeTakipSistemiPage: React.FC = () => {
             </a>
           </div>
         </div>
-      </div>
-    </>
-  );
-};
+      </>
+    );
+  };
 
-export default ProjeTakipSistemiPage; 
+  export default ProjeTakipSistemiPage; 

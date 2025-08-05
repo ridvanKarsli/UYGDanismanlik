@@ -1,19 +1,37 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import { Button } from 'antd';
+import Script from 'next/experimental-script';
 
 const TeknoparkPage: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Teknopark'a Giriş Yapmak İçin Bilmeniz Gerekenler</title>
-        <meta name="description" content="Teknoparklara giriş süreçleri, başvuru koşulları, avantajları ve dikkat edilmesi gerekenler hakkında detaylı bilgiler." />
+        <title>Teknopark'a Giriş Yapmak İçin Bilmeniz Gerekenler - UYG Yönetim ve Danışmanlık</title>
+        <meta charSet="utf-8"/>
+        <meta property="keywords" content="teknopark,ar-ge,hibe,destek,danışmanlık" key="title" />
+        <meta property="og:title" content="Teknopark'a Giriş Yapmak İçin Bilmeniz Gerekenler" key="title" />
+        <meta name="Description" content="Teknoparklara giriş süreçleri, başvuru koşulları, avantajları ve dikkat edilmesi gerekenler hakkında detaylı bilgiler." />
+        <meta name="og:description" content="Teknoparklara giriş süreçleri, başvuru koşulları, avantajları ve dikkat edilmesi gerekenler hakkında detaylı bilgiler." />
+        <meta property="og:url" content="/teknopark" />
+        <meta property="og:image" content="teknopark.jpeg" />
+        <link rel="manifest" href="/site.webmanifest" />
       </Head>
+      <Script
+        src="https://www.google-analytics.com/analytics.js"      />
+      <Script id="google-analytics">
+      {`
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'G-H7KR0LT2B4', 'auto');
+      ga('send', 'pageview');
+      `}
+      </Script>
       
-      <div className="teknopark-page">
-        <div className="page-container">
-          <h1 className="page-title">Teknopark'a Giriş Yapmak İçin Bilmeniz Gerekenler</h1>
+      <div className='hakkimizda-aciklama'>
+        <h1>Teknopark'a Giriş Yapmak İçin Bilmeniz Gerekenler</h1>
           
           <div className="content-section">
             <h2>Teknopark Nedir?</h2>
@@ -81,11 +99,11 @@ const TeknoparkPage: React.FC = () => {
               bulunmaktadır.
             </p>
           </div>
-
         </div>
-      </div>
-    </>
-  );
-};
+      </>
+    );
+  };
 
-export default TeknoparkPage; 
+  export default TeknoparkPage; 
+
+

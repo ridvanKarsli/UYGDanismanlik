@@ -42,7 +42,47 @@ export const Header: React.FC = ()=> {
     if (typeof window !== 'undefined') {
       setWindowSize(window.screen.width);
     }
-  })
+    
+    // Set current menu item based on current path
+    const pathname = router.pathname;
+    if (pathname === '/') {
+      setCurrent('mail');
+    } else if (pathname === '/hakkimizda') {
+      setCurrent('hakkimizda');
+    } else if (pathname === '/kutuphane') {
+      setCurrent('kutuphane');
+    } else if (pathname === '/tubitak-teydeb') {
+      setCurrent('tubitak-teydeb:1');
+    } else if (pathname === '/kosgeb-destekleri') {
+      setCurrent('kosgeb-destekleri:2');
+    } else if (pathname === '/teknoloji-gelistirme-bolgesi') {
+      setCurrent('teknoloji-gelistirme-bolgesi:3');
+    } else if (pathname === '/avrupa-birligi-projeleri') {
+      setCurrent('avrupa-birligi-projeleri:4');
+    } else if (pathname === '/yatirim-tesvik-belgesi') {
+      setCurrent('yatirim-tesvik-belgesi:5');
+    } else if (pathname === '/ihracat-kalkinma-ajansi') {
+      setCurrent('ihracat-kalkinma-ajansi:6');
+    } else if (pathname === '/teknopark') {
+      setCurrent('teknopark:1');
+    } else if (pathname === '/projeTakipSistemi') {
+      setCurrent('projeTakip:2');
+    } else if (pathname === '/bultenler') {
+      setCurrent('bultenler:3');
+    } else if (pathname.startsWith('/proje-dongusu-egitimi')) {
+      setCurrent('egitim:1');
+    } else if (pathname.startsWith('/digital-ogrenim-egitimi')) {
+      setCurrent('egitim:2');
+    } else if (pathname.startsWith('/eklektirik-elektronik-eigitimi')) {
+      setCurrent('egitim:4');
+    } else if (pathname.startsWith('/plc-teknolojisi-egitimi')) {
+      setCurrent('egitim:5');
+    } else if (pathname.startsWith('/endustri4-0')) {
+      setCurrent('egitim:6');
+    } else if (pathname === '/iletisim') {
+      setCurrent('contact');
+    }
+  }, [router.pathname])
 
   if(windowSize < 500){
     return(
@@ -86,30 +126,34 @@ export const Header: React.FC = ()=> {
                     </Link>
                 
               </Menu.Item>
-              <SubMenu key="offices" icon={<AppstoreOutlined />}title="Şirketimiz">
-                  <Menu.Item key="offices:1">
-                    <Link href='/hakkimizda'>
-                        Hakkımızda
-                    </Link>
-                    </Menu.Item>
-                  <Menu.Item key="offices:2">
-                      <Link href='/ekibimiz'>
-                        Ekibimiz
-                      </Link>
-                    </Menu.Item>
-              </SubMenu>
+              <Menu.Item key="hakkimizda" icon={<AppstoreOutlined />}>
+                  <Link href='/hakkimizda'>
+                      Hakkımızda
+                  </Link>
+              </Menu.Item>
+              <Menu.Item key="kutuphane" icon={<AppstoreOutlined />}>
+                  <Link href='/kutuphane'>
+                      Kütüphane
+                  </Link>
+              </Menu.Item>
               <SubMenu key="hizmetler" icon={<PieChartOutlined />} title="Hizmetlerimiz">
-                  <Menu.Item key="kurumsal:1">
-                    <Link href='/kurumsal-yonetim-danismanligi'> Kurumsal Yönetim Danışmanlığı </Link>
+                  <Menu.Item key="tubitak-teydeb:1">
+                    <Link href='/tubitak-teydeb'>TÜBİTAK-TEYDEB Destek Programları</Link>
                   </Menu.Item>
-                  <Menu.Item key="kurumsal:2"> 
-                    <Link href='/kurumsal-proje-danismanligi'>Kurumsal Proje Danışmanlığı </Link>
+                  <Menu.Item key="kosgeb-destekleri:2"> 
+                    <Link href='/kosgeb-destekleri'>KOSGEB Destek Programları</Link>
                   </Menu.Item>
-                  <Menu.Item key="kurumsal:3">
-                    <Link href='/tesvikler'>Teşvikler</Link>
+                  <Menu.Item key="teknoloji-gelistirme-bolgesi:3">
+                    <Link href='/teknoloji-gelistirme-bolgesi'>Teknoloji Geliştirme Bölgesi</Link>
                   </Menu.Item>
-                  <Menu.Item key="kurumsal:4">
-                    <Link href='/dijital-cozumler'>Dijital Çözümler</Link>
+                  <Menu.Item key="avrupa-birligi-projeleri:4">
+                    <Link href='/avrupa-birligi-projeleri'>Avrupa Birliği Projeleri</Link>
+                  </Menu.Item>
+                  <Menu.Item key="yatirim-tesvik-belgesi:5">
+                    <Link href='/yatirim-tesvik-belgesi'>Yatırım Teşvik Belgesi</Link>
+                  </Menu.Item>
+                  <Menu.Item key="ihracat-kalkinma-ajansi:6">
+                    <Link href='/ihracat-kalkinma-ajansi'>İhracat & Kalkınma Ajansı</Link>
                   </Menu.Item>
               </SubMenu>
               <SubMenu key="egitim" icon={<RadarChartOutlined />} title="Eğitimlerimiz">
@@ -247,29 +291,34 @@ export const Header: React.FC = ()=> {
                     </Link>
                 
               </Menu.Item>
-              <SubMenu key="offices" icon={<AppstoreOutlined />}title="Şirketimiz">
-                  <Menu.Item key="offices:1">
-                    <Link href='/hakkimizda'>
-                        Hakkımızda
-                    </Link>
-                    </Menu.Item>
-                  <Menu.Item key="offices:2">
-                      <Link href='/ekibimiz'>
-                        Ekibimiz
-                      </Link>
-                    </Menu.Item>
-              </SubMenu>
+              <Menu.Item key="hakkimizda" icon={<AppstoreOutlined />}>
+                  <Link href='/hakkimizda'>
+                      Hakkımızda
+                  </Link>
+              </Menu.Item>
+              <Menu.Item key="kutuphane" icon={<AppstoreOutlined />}>
+                  <Link href='/kutuphane'>
+                      Kütüphane
+                  </Link>
+              </Menu.Item>
               <SubMenu key="hizmetler" icon={<PieChartOutlined />} title="Hizmetlerimiz">
-                  <Menu.Item key="kurumsal:1">
-                    <Link href='/kurumsal-yonetim-danismanligi'>Kurumsal Yönetim Danışmanlığı</Link>
+                  <Menu.Item key="tubitak-teydeb:1">
+                    <Link href='/tubitak-teydeb'>TÜBİTAK-TEYDEB Destek Programları</Link>
                   </Menu.Item>
-                  <Menu.Item key="kurumsal:2"> 
-                    <Link href='/kurumsal-proje-danismanligi'>Kurumsal Proje Danışmanlığı </Link>
+                  <Menu.Item key="kosgeb-destekleri:2"> 
+                    <Link href='/kosgeb-destekleri'>KOSGEB Destek Programları</Link>
                   </Menu.Item>
-                  <Menu.Item key="kurumsal:3">
-                    <Link href='/tesvikler'>Teşvikler</Link></Menu.Item>
-                  <Menu.Item key="kurumsal:4">
-                    <Link href='/dijital-cozumler'>Dijital Çözümler</Link>
+                  <Menu.Item key="teknoloji-gelistirme-bolgesi:3">
+                    <Link href='/teknoloji-gelistirme-bolgesi'>Teknoloji Geliştirme Bölgesi</Link>
+                  </Menu.Item>
+                  <Menu.Item key="avrupa-birligi-projeleri:4">
+                    <Link href='/avrupa-birligi-projeleri'>Avrupa Birliği Projeleri</Link>
+                  </Menu.Item>
+                  <Menu.Item key="yatirim-tesvik-belgesi:5">
+                    <Link href='/yatirim-tesvik-belgesi'>Yatırım Teşvik Belgesi</Link>
+                  </Menu.Item>
+                  <Menu.Item key="ihracat-kalkinma-ajansi:6">
+                    <Link href='/ihracat-kalkinma-ajansi'>İhracat & Kalkınma Ajansı</Link>
                   </Menu.Item>
               </SubMenu>
               <SubMenu key="egitim" icon={<RadarChartOutlined />} title="Eğitimlerimiz">
