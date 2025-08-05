@@ -1,10 +1,6 @@
 import React from "react";
-import {  Main, MainFeatures, OurReferences, VisitorStatement } from "@components";
-import SloganArea from "@components/sloganArea/intex";
-import Blog from "@components/Blog";
-import Activities from "@components/activities";
+import {  Main, MainFeatures, OurReferences, VisitorStatement, Basarilarimiz, Hizmetler, SloganArea, Blog, Activities } from "@components";
 import Head from 'next/head'
-import Hizmetler from "@components/boxes";
 
 const Home: React.FC = () => {
   return (
@@ -26,9 +22,10 @@ const Home: React.FC = () => {
     >
       <Main />
       <Hizmetler />
+      <Basarilarimiz />
+      <OurReferences />
       <VisitorStatement />
       <MainFeatures />
-      <OurReferences />
       <SloganArea />
       <Activities />
     </div>

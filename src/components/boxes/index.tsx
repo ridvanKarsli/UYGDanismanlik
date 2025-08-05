@@ -59,6 +59,6 @@ const Hizmetler: React.FC = () => {
   )
 }
 
-export default Hizmetler
+export { Hizmetler }
 
 

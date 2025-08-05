@@ -155,29 +155,17 @@ export const Header: React.FC = ()=> {
                   <Menu.Item key="ihracat-kalkinma-ajansi:6">
                     <Link href='/ihracat-kalkinma-ajansi'>İhracat & Kalkınma Ajansı</Link>
                   </Menu.Item>
-              </SubMenu>
-              <SubMenu key="egitim" icon={<RadarChartOutlined />} title="Eğitimlerimiz">
-                  <Menu.Item key="egitim:1">
-                    <Link href='/proje-dongusu-egitimi'> Proje Döngüsü Eğitimi</Link>
+                  <Menu.Item key="teknopark:7">
+                    <Link href='/teknopark'>Teknopark</Link>
                   </Menu.Item>
-                  <Menu.Item key="egitim:2">
-                    <Link href='/digital-ogrenim-egitimi'>Digital Öğretim Uygulamarı </Link>
+                  <Menu.Item key="projeTakip:8">
+                    <Link href='/projeTakipSistemi'>Proje Takip Sistemi</Link>
                   </Menu.Item>
-                  <Menu.Item key="egitim:3">
-                    <Link href='/stem-egitimi'>Steam Eğitimi</Link>
-                  </Menu.Item>
-                  <Menu.Item key="egitim:4">
-                    <Link href='/eklektirik-elektronik-eigitimi'>Elektrik Elektronik Eğitimi</Link>
-                  </Menu.Item>
-                  <Menu.Item key="egitim:5">
-                      <Link href='/plc-teknolojisi-egitimi'>PLC Teknolojisi Eğitimi</Link> 
-                    </Menu.Item>
-                  <Menu.Item key="egitim:6">
-                    <Link href='/endustri4-0'>
-                      Endüstri 4.0 ve Haberleşme Protokolleri Eğitimleri 
-                      </Link> 
+                  <Menu.Item key="bultenler:9">
+                    <Link href='/bultenler'>Bültenler</Link>
                   </Menu.Item>
               </SubMenu>
+
               <SubMenu key="organizsyon" icon={<AimOutlined />} title="Organizasyon">
                   <Menu.Item key="organizsyon:1">
                     <Link href='/yurtdisi-egitim-turlari'>Yurt Dışı Eğitim Turları </Link> 
@@ -320,26 +308,17 @@ export const Header: React.FC = ()=> {
                   <Menu.Item key="ihracat-kalkinma-ajansi:6">
                     <Link href='/ihracat-kalkinma-ajansi'>İhracat & Kalkınma Ajansı</Link>
                   </Menu.Item>
-              </SubMenu>
-              <SubMenu key="egitim" icon={<RadarChartOutlined />} title="Eğitimlerimiz">
-                  <Menu.Item key="egitim:1">
-                    <Link href='/proje-dongusu-egitimi'> Proje Döngüsü Eğitimi</Link>
+                  <Menu.Item key="teknopark:7">
+                    <Link href='/teknopark'>Teknopark</Link>
                   </Menu.Item>
-                  <Menu.Item key="egitim:2">
-                    <Link href='/digital-ogrenim-egitimi'>Digital Öğretim Uygulamarı </Link>
+                  <Menu.Item key="projeTakip:8">
+                    <Link href='/projeTakipSistemi'>Proje Takip Sistemi</Link>
                   </Menu.Item>
-                  <Menu.Item key="egitim:3">
-                    <Link href='/eklektirik-elektronik-eigitimi'>Elektrik Elektronik Eğitimi</Link>
-                  </Menu.Item>
-                  <Menu.Item key="egitim:4">
-                      <Link href='/plc-teknolojisi-egitimi'>PLC Teknolojisi Eğitimi</Link>
-                    </Menu.Item>
-                  <Menu.Item key="egitim:5">
-                    <Link href='/endustri4-0'>
-                      Endüstri 4.0 ve Haberleşme Protokolleri Eğitimleri 
-                      </Link> 
+                  <Menu.Item key="bultenler:9">
+                    <Link href='/bultenler'>Bültenler</Link>
                   </Menu.Item>
               </SubMenu>
+
               <Menu.Item key="contact">
                 <Link href='/iletisim'>
                   İletişim

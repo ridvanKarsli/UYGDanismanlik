@@ -8,3 +8,8 @@ export {MainFeatures} from './mainFeatures';
 export {OurReferences} from './ourReferences';
 export { VisitorStatement } from './visitorStatement';
 export {Header} from './header';
+export {Basarilarimiz} from './basarilarimiz';
+export {Hizmetler} from './boxes';
+export {SloganArea} from './sloganArea/intex';
+export {Blog} from './Blog';
+export {Activities} from './activities';

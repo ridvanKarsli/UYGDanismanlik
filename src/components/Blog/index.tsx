@@ -32,4 +32,4 @@ const Blog: React.FC = () => {
   );
 };
 
-export default Blog;
+export { Blog };

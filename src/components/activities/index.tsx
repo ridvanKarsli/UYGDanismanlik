@@ -33,4 +33,4 @@ const Activities: React.FC = () => {
   );
 };
 
-export default Activities;
+export { Activities };

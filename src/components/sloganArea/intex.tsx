@@ -22,4 +22,4 @@ const SloganArea: React.FC = () => {
   );
 };
 
-export default SloganArea;
+export { SloganArea };
